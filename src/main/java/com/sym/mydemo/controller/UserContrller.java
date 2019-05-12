@@ -21,6 +21,12 @@ import javax.annotation.PreDestroy;
 @RequestMapping("/user")
 public class UserContrller {
 
+    /**
+     * hasRole对应的角色以ROLE_
+     * hasAuthority对应业务权限
+     * @param model
+     * @return
+     */
 //    @PreAuthorize("hasRole('USER')")
 //    @PreAuthorize("hasAuthority('book-view1')")
     @RequestMapping("/index")

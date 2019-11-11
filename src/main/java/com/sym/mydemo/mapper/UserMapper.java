@@ -21,4 +21,6 @@ public interface UserMapper extends BaseMapper<User> {
 
     IPage<User> getAllUserByPage(Page page, @Param("email") String email);
 
+    void updateUserByUserId(@Param("age") String age,@Param("userId") String userId);
+
 }

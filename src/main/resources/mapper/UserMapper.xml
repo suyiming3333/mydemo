@@ -6,4 +6,8 @@
         select * from user where email like '%${email}%'
     </select>
 
+    <update id="updateUserByUserId">
+        update user t set t.age = #{age} where t.id = #{userId}
+    </update>
+
 </mapper>

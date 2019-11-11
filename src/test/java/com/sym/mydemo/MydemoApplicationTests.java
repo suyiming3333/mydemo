@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sym.mydemo.entity.User;
 import com.sym.mydemo.mapper.UserMapper;
+import com.sym.mydemo.service.UserService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +27,9 @@ public class MydemoApplicationTests {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private UserService userServiceImpl;
+
     @Test
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
@@ -40,6 +44,12 @@ public class MydemoApplicationTests {
         IPage<User> userList = userMapper.getAllUserByPage(page,"test");
         //userList.forEach(System.out::println);
         System.out.println(11111);
+    }
+
+    @Test
+    public void testUpdate(){
+        userServiceImpl.updateUserByUserId("555","1");
+        System.out.println("end");
     }
 
 }

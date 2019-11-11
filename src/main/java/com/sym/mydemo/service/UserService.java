@@ -13,4 +13,6 @@ import com.sym.mydemo.entity.User;
  */
 public interface UserService extends IService<User> {
 
+    void updateUserByUserId(String age,String userId);
+
 }
